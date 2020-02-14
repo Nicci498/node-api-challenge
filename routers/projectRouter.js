@@ -1,8 +1,6 @@
 const express = require('express');
-const Projects = require('./data/helpers/projectModel.js');
-const Actions = require('./data/helpers/actionModel.js');
-
 const router = express.Router();
+const Projects = require('../data/helpers/projectModel.js');
 
 router.get('/', (req,res) =>{
     Projects.get()
@@ -70,4 +68,4 @@ router.put('/:id', (req, res)=> {
 })// working
 
 
-module.exports = router;
+module.exports = router; 
